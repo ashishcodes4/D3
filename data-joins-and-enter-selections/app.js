@@ -33,7 +33,10 @@ d3.select( '#quotes' )
   .data(quotes)
   .enter()
   .append('li')
-    .text( d => d.quote );
+    .text( ( d, i ) => i+1 + ". " +  d.quote+" " + "("+d.movie+")"+ " -" + d.year )
+    .style('margin', '20px')
+    .style('padding', '20px')
+    .style('font-size', (d) => d.quote.length < 25 ? '2em' : '1em');
 
 
 
