@@ -11,3 +11,19 @@ d3.selectAll('li')
 d3.selectAll('li')
     .style('margin-bottom', '.1em') ;
 
+
+
+// for events in D3 testing .....
+
+d3.select('#new-note').on('submit', function() {
+    //we can access the event obejct by calling a special D3 method.
+    d3.event.preventDefault();
+
+    var input = d3.select('input');
+    d3.select('#notes')
+        .append('p')
+        .classed('note', true)
+        .text(input.property('value'))
+    input.property('value', '')
+
+});
