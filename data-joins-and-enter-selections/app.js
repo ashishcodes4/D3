@@ -50,5 +50,5 @@ d3.select( '#quotes' )
 
 
 
-
+console.log('from the office terminal');
 console.log('from the js file');
