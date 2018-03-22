@@ -26,3 +26,17 @@ var quotes = [
     rating: "G"
   }
 ];
+
+d3.select( '#quotes' )
+    .style('list-style', 'none')
+  .selectAll('li')
+  .data(quotes)
+  .enter()
+  .append('li')
+    .text( d => d.quote );
+
+
+
+
+
+  console.log('from the js file');
