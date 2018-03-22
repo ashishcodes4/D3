@@ -8,8 +8,3 @@ function getfrequency(str) {
 function getStarted () {
     console.log('hellow');
 }
-
-function getting () {
-    console.log('div');
-}
-
