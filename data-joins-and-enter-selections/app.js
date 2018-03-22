@@ -27,6 +27,13 @@ var quotes = [
   }
 ];
 
+var colors = {
+  "G": "#3cff00",
+  "R": "#ff0000",
+  "PG-13": "#ff9000",
+  "PG": "#f9ff00"
+}
+
 d3.select( '#quotes' )
     .style('list-style', 'none')
   .selectAll('li')
@@ -36,10 +43,12 @@ d3.select( '#quotes' )
     .text( ( d, i ) => i+1 + ". " +  d.quote+" " + "("+d.movie+")"+ " -" + d.year )
     .style('margin', '20px')
     .style('padding', '20px')
-    .style('font-size', (d) => d.quote.length < 25 ? '2em' : '1em');
+    .style('font-size', (d) => d.quote.length < 25 ? '2em' : '1em')
+    .style('background-color', (d) => colors[d.rating])
+    .style('border-radius', '8px');
 
 
 
 
 
-  console.log('from the js file');
+console.log('from the js file');
